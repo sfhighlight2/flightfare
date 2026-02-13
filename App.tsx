@@ -571,7 +571,7 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="mb-6 flex justify-center">
             <img
-              src="/images/logo.png"
+              src="/images/logo.svg"
               alt="FlightFareTech"
               className="h-12 w-auto object-contain brightness-0 invert opacity-90"
             />

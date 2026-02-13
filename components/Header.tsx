@@ -8,9 +8,9 @@ export const Header: React.FC = () => {
         {/* Logo Section */}
         <div className="flex items-center gap-2">
           <img
-            src="/images/logo.png"
+            src="/images/logo.svg"
             alt="FlightFareTech - Global Travel Maker"
-            className="h-10 w-auto object-contain"
+            className="h-12 w-auto object-contain"
             onError={(e) => {
               e.currentTarget.style.display = 'none';
               e.currentTarget.nextElementSibling?.classList.remove('hidden');
@@ -18,7 +18,11 @@ export const Header: React.FC = () => {
           />
           {/* Fallback if image not yet uploaded by user */}
           <div className="hidden flex flex-col leading-none">
-            <span className="text-xl font-black text-red-600 tracking-tighter">FLIGHTFARE<span className="text-blue-700">TECH</span></span>
+            <span className="text-xl font-black tracking-tighter">
+              <span className="text-red-600">FLIGHT</span>
+              <span className="text-blue-700">FARE</span>
+              <span className="text-red-600">TECH</span>
+            </span>
             <span className="text-[0.6rem] text-gray-500 tracking-[0.2em] font-medium uppercase">Global Travel Maker</span>
           </div>
         </div>
