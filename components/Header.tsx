@@ -7,15 +7,19 @@ export const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo Section */}
         <div className="flex items-center gap-2">
-          {/* Simulating the logo from the prompt using text/colors if image fails, or img tag */}
-          <div className="flex items-center">
-             <div className="relative h-10 w-auto flex items-center justify-center overflow-hidden">
-                {/* Visual fallback if image doesn't load, but designed to look like the attachment */}
-                <div className="flex flex-col leading-none">
-                    <span className="text-xl font-black text-red-600 tracking-tighter">FLIGHTFARE<span className="text-blue-700">TECH</span></span>
-                    <span className="text-[0.6rem] text-gray-500 tracking-[0.2em] font-medium uppercase">Global Travel Maker</span>
-                </div>
-             </div>
+          <img
+            src="/images/logo.png"
+            alt="FlightFareTech - Global Travel Maker"
+            className="h-10 w-auto object-contain"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+              e.currentTarget.nextElementSibling?.classList.remove('hidden');
+            }}
+          />
+          {/* Fallback if image not yet uploaded by user */}
+          <div className="hidden flex flex-col leading-none">
+            <span className="text-xl font-black text-red-600 tracking-tighter">FLIGHTFARE<span className="text-blue-700">TECH</span></span>
+            <span className="text-[0.6rem] text-gray-500 tracking-[0.2em] font-medium uppercase">Global Travel Maker</span>
           </div>
         </div>
 
