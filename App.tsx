@@ -569,13 +569,7 @@ const App: React.FC = () => {
 
       <footer className="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <div className="mb-6 flex justify-center">
-            <img
-              src="/images/logomain.jpg"
-              alt="FlightFareTech"
-              className="h-12 w-auto object-contain brightness-0 invert opacity-90"
-            />
-          </div>
+
           <div className="flex justify-center gap-6 mb-8 text-sm">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
