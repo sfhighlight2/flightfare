@@ -8,9 +8,9 @@ export const Header: React.FC = () => {
         {/* Logo Section */}
         <div className="flex items-center gap-2">
           <img
-            src="/images/logo.svg"
+            src="/images/logomain.jpg"
             alt="FlightFareTech - Global Travel Maker"
-            className="h-12 w-auto object-contain"
+            className="h-10 w-auto object-contain"
             onError={(e) => {
               e.currentTarget.style.display = 'none';
               e.currentTarget.nextElementSibling?.classList.remove('hidden');

@@ -450,9 +450,9 @@ const App: React.FC = () => {
                   </div>
                   <h4 className="text-red-800 font-bold uppercase tracking-wide text-sm mb-1">Book This Deal with an Expert</h4>
                   <p className="text-red-600 text-xs mb-3 font-medium">Skip the form and lock in this rate instantly.</p>
-                  <a href="tel:+18005754609" className="inline-flex items-center justify-center gap-3 bg-red-600 text-white font-black text-2xl md:text-3xl py-3 px-6 rounded-lg shadow-lg hover:bg-red-700 hover:scale-105 transition-all w-full md:w-auto mx-auto z-10 relative">
-                    <Phone className="animate-pulse" size={28} />
-                    (800) 575-4609
+                  <a href="tel:+18005754609" className="inline-flex items-center justify-center gap-2 bg-red-600 text-white font-black text-xl md:text-3xl py-3 px-4 md:px-6 rounded-lg shadow-lg hover:bg-red-700 hover:scale-105 transition-all w-full md:w-auto mx-auto z-10 relative whitespace-nowrap">
+                    <Phone className="animate-pulse flex-shrink-0" size={24} />
+                    <span>(800) 575-4609</span>
                   </a>
                 </div>
 
@@ -571,7 +571,7 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="mb-6 flex justify-center">
             <img
-              src="/images/logo.svg"
+              src="/images/logomain.jpg"
               alt="FlightFareTech"
               className="h-12 w-auto object-contain brightness-0 invert opacity-90"
             />
