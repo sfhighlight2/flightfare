@@ -7,7 +7,7 @@ import { SEOContent } from './components/SEOContent';
 import { AirportAutocomplete } from './components/AirportAutocomplete';
 import { CustomDatePicker } from './components/CustomDatePicker';
 import { ExitIntentPopup } from './components/ExitIntentPopup';
-import { BookingNotification } from './components/BookingNotification';
+
 import { LowPriceModal } from './components/LowPriceModal';
 import { FlightSearchParams, AppStep, UserLead, CabinClass, TripType } from './types';
 import { Search, Plane, Check, ArrowRight, Phone, Shield, User, ChevronDown, Minus, Plus, Mail, TrendingUp, AlertCircle } from 'lucide-react';
@@ -141,7 +141,7 @@ const App: React.FC = () => {
       <Header />
       <ExitIntentPopup />
       <LowPriceModal isOpen={isLowPriceModalOpen} onClose={() => setIsLowPriceModalOpen(false)} />
-      <BookingNotification />
+
 
       {/* --- HERO SECTION --- */}
       {/* 
@@ -450,9 +450,9 @@ const App: React.FC = () => {
                   </div>
                   <h4 className="text-red-800 font-bold uppercase tracking-wide text-sm mb-1">Book This Deal with an Expert</h4>
                   <p className="text-red-600 text-xs mb-3 font-medium">Skip the form and lock in this rate instantly.</p>
-                  <a href="tel:+18005754609" className="inline-flex items-center justify-center gap-2 bg-red-600 text-white font-black text-xl md:text-3xl py-3 px-4 md:px-6 rounded-lg shadow-lg hover:bg-red-700 hover:scale-105 transition-all w-full md:w-auto mx-auto z-10 relative whitespace-nowrap">
+                  <a href="tel:+18005180250" className="inline-flex items-center justify-center gap-2 bg-red-600 text-white font-black text-xl md:text-3xl py-3 px-4 md:px-6 rounded-lg shadow-lg hover:bg-red-700 hover:scale-105 transition-all w-full md:w-auto mx-auto z-10 relative whitespace-nowrap">
                     <Phone className="animate-pulse flex-shrink-0" size={24} />
-                    <span>(800) 575-4609</span>
+                    <span>(800) 518-0250</span>
                   </a>
                 </div>
 
@@ -581,7 +581,7 @@ const App: React.FC = () => {
             *Savings claims based on comparison with major public OTA rates for same-day bookings on select international routes. Prices subject to availability and change without notice. All tickets subject to airline fare rules and restrictions.
           </p>
           <p className="text-[10px] max-w-3xl mx-auto text-gray-700 leading-relaxed border-t border-gray-800 pt-4 mt-4">
-            Disclaimer: The independent travel website FlightFareTech is unaffiliated with any third parties. You acknowledge that FlightFareTech is not responsible for any loss, whether direct or indirect, resulting from offers, content, or links to other websites found on this website by using FlightFareTech.com. If you have any questions, call us at <a href="tel:+18005754609" className="hover:text-gray-500 transition-colors">+1-800-575-4609</a>, our complementary number, or send an email to <a href="mailto:info@FlightFareTech.com" className="hover:text-gray-500 transition-colors">info@FlightFareTech.com</a>.
+            Disclaimer: The independent travel website FlightFareTech is unaffiliated with any third parties. You acknowledge that FlightFareTech is not responsible for any loss, whether direct or indirect, resulting from offers, content, or links to other websites found on this website by using FlightFareTech.com. If you have any questions, call us at <a href="tel:+18005180250" className="hover:text-gray-500 transition-colors">+1-800-518-0250</a>, our complementary number, or send an email to <a href="mailto:info@FlightFareTech.com" className="hover:text-gray-500 transition-colors">info@FlightFareTech.com</a>.
           </p>
         </div>
       </footer>

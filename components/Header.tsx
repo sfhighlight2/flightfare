@@ -30,9 +30,9 @@ export const Header: React.FC = () => {
         {/* Desktop Nav / CTA */}
         <div className="hidden md:flex items-center gap-6">
           <span className="text-sm font-medium text-gray-600">Exclusive Unpublished Rates</span>
-          <a href="tel:+18005754609" className="flex items-center gap-2 bg-blue-900 text-white px-5 py-2 rounded-full font-bold hover:bg-blue-800 transition-colors">
+          <a href="tel:+18005180250" className="flex items-center gap-2 bg-blue-900 text-white px-5 py-2 rounded-full font-bold hover:bg-blue-800 transition-colors">
             <PhoneCall size={18} />
-            <span>(800) 575-4609</span>
+            <span>(800) 518-0250</span>
           </a>
         </div>
 
