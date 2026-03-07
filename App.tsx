@@ -120,6 +120,12 @@ const App: React.FC = () => {
       alert("Please enter a valid email address.");
       return;
     }
+    // Fire Google Ads conversion event
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-17966330920/lqCLCNDWjIQcEKjogfdC'
+      });
+    }
     setStep(AppStep.SUCCESS);
   };
 
