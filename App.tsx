@@ -120,12 +120,34 @@ const App: React.FC = () => {
       alert("Please enter a valid email address.");
       return;
     }
+
     // Fire Google Ads conversion event
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'conversion', {
         'send_to': 'AW-17966330920/lqCLCNDWjIQcEKjogfdC'
       });
     }
+
+    // Send data to Zapier Webhook
+    const totalTravelers = (searchParams.passengers.adults || 0) + (searchParams.passengers.children || 0);
+
+    fetch('https://hooks.zapier.com/hooks/catch/5021480/ux82j59/', {
+      method: 'POST',
+      body: JSON.stringify({
+        name: lead.name,
+        phone: lead.phone,
+        email: lead.email,
+        fly_from: searchParams.from,
+        fly_to: searchParams.to,
+        departing_date: searchParams.departDate,
+        returning_date: searchParams.tripType === 'roundtrip' ? searchParams.returnDate : 'N/A',
+        number_of_travelers: totalTravelers,
+        cabin_class: searchParams.cabinClass,
+        trip_type: searchParams.tripType,
+        submitted_at: new Date().toISOString()
+      }),
+    }).catch(err => console.error('Zapier submission error:', err));
+
     setStep(AppStep.SUCCESS);
   };
 
