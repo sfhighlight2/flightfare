@@ -564,14 +564,26 @@ const App: React.FC = () => {
 
               <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6 mb-8 relative overflow-hidden">
                 <div className="absolute top-0 right-0 bg-blue-100 px-3 py-1 rounded-bl-lg text-xs font-bold text-blue-700">PRIORITY STATUS</div>
-                <div className="flex items-center justify-center gap-3 mb-3">
-                  <Phone className="text-blue-600 animate-bounce" size={24} />
-                  <span className="text-blue-900 font-bold text-xl">Incoming Call...</span>
+                <div className="flex flex-col items-center gap-4">
+                  <div className="flex items-center justify-center gap-3">
+                    <Phone className="text-blue-600 animate-pulse" size={24} />
+                    <span className="text-blue-900 font-bold text-xl uppercase tracking-tight">Agent Available</span>
+                  </div>
+
+                  <p className="text-blue-800 font-medium">
+                    A senior agent is available to finalize your discount.
+                  </p>
+
+                  <a
+                    href="tel:+18005180250"
+                    className="inline-flex items-center justify-center gap-3 bg-red-600 text-white font-black text-2xl md:text-3xl py-4 px-8 rounded-xl shadow-[0_10px_20px_-10px_rgba(220,38,38,0.5)] hover:bg-red-700 hover:scale-105 transition-all w-full md:w-auto relative z-10 group"
+                  >
+                    <Phone size={28} className="group-hover:rotate-12 transition-transform" />
+                    <span>(800) 518-0250</span>
+                  </a>
+
+                  <p className="text-xs text-blue-400 mt-2 italic font-medium">Click to call and lock in this rate now</p>
                 </div>
-                <p className="text-blue-800 font-medium">
-                  A senior agent will call you within <span className="font-bold underline decoration-red-500 decoration-2">2 minutes</span> at {lead.phone} to finalize the discount.
-                </p>
-                <p className="text-xs text-blue-400 mt-2">Please keep your line open to secure this price.</p>
               </div>
 
               <button
